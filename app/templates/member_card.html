@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>町内会 会員証</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2em; }
+    .card {
+      border: 2px solid #000;
+      padding: 1.5em;
+      border-radius: 10px;
+      display: inline-block;
+      background: #f0f0f0;
+    }
+    .label { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>🏘 町内会 会員証</h2>
+    <p><span class="label">氏名:</span> {{ member["氏名"] }}</p>
+    <p><span class="label">住所:</span> {{ member["住所"] }}</p>
+    <p><span class="label">会員番号:</span> {{ member["会員番号"] }}</p>
+    <p><span class="label">有効期限:</span> {{ member["有効期限"] }}</p>
+  </div>
+</body>
+</html>
