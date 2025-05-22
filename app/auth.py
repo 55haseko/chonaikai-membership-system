@@ -1,13 +1,24 @@
 # app/auth.py
 
 from fastapi import APIRouter, HTTPException
-from app.sheets import find_member_by_line_id
+from pydantic import BaseModel
+from app.sheets import get_worksheet
 
 router = APIRouter()
 
-@router.get("/auth/{line_user_id}")
-def auth(line_user_id: str):
-    member = find_member_by_line_id(line_user_id)
-    if not member:
-        raise HTTPException(status_code=404, detail="Member not found")
-    return member
+# 🔸 入力モデル（氏名と住所）
+class VerifyRequest(BaseModel):
+    name: str
+    address: str
+
+# 🔸 認証API（POST /api/verify）
+@router.post("/verify")
+def verify_member(data: VerifyRequest):
+    worksheet = get_worksheet()
+    records = worksheet.get_all_records()
+
+    for record in records:
+        if record.get("氏名") == data.name and record.get("住所") == data.address:
+            return {"status": "success", "member": record}
+
+    raise HTTPException(status_code=404, detail="会員情報が見つかりませんでした")
