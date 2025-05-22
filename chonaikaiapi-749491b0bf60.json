@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "chonaikaiapi",
+  "private_key_id": "749491b0bf6078ba56e6f5b80a4321fa9fb2c591",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCSkd7ZmtZaQ1ll\nFNLASaVWkZ2Em3aIscErl+6X1/c/lOADZYNnN8pGLGdf1/Ws0HTOxd0M70NF4HHW\nILgxJvVk26ucZwnEg2i8PrhC6fceumus8oFIRmiwro4qRBCK4yE29L1KnhZH+TTp\n3AN4iR6EFw0uZeHeLUutm7WKWrNNPWANRUX+JdyGcTYA7tO4mJ18NpMyVlbncoxG\nbxbZcqm2lD5xTQL0QfBFX8QTyCgAkpAYxS3nzyvFuHklNWINGBBR5vFTsPoKEAyR\nnpzufWPMXV3+5t6g9TyxQ7vQlKb9D6D30+gT+kSqOHJKU6FtPXRK4zVwR5a9updj\n3pgL+fMlAgMBAAECggEAEmW5Qrgi6BaPEyyEyE/A2fe80rHO3u6Xms4Jy/PMRvtR\nY6vAzYUdCyeKBueXy0wpH/E0bhS0Qtee16v+DWa1+PsdHyx3IecFZPznFQ3Cuo/X\ncdBzYNaRpSfBPtXnUP+cd4ZLIkwV640rfUqOrE5jJF0JBwYRJARXJ6ClWLX0zqDR\nEu7y41b/TTOrp9yo4SDitOZwXNRbsdLjRYyA5/33o+K/k/6km2ipKH3vfZLoYNd+\n3gaR7lFNW74hYgapPLtie/cdWuXPD34HUresAllWOe+CN7Ks+tUVN3ptlDtx2jpT\nEJe6SQlecyZFK3maXL0OwJ764FQ1TYjkirOUMyyTewKBgQDJFRmy5sgbFstJa5aZ\nONfnmX4LDG1UKJG8hQxVdJWk0ILoeyjmApTKJwFAmz5GCIkQkAyL81UFWkzIkwjQ\niqYT5Gx7e3QE87SJ31QIbI7FPAgswz/gm4IUsBhLXPtuf7LefIUKHoTMYNeEZSDo\naO0SEKC+Nb6/f4/kqLa48CgCWwKBgQC6mXXZN4RYb3+j7qeuZwendSxVEkwvVHxq\nL6wiEwFuTAqusCEYryS17O/gZ+cgIQFueW7KehxFP3qyNdbNpG4O5EwjaCilxfdM\ngNoS0ZF9ZZD5gtPaCSQME9UFmGhlRtQ8kvH0zZ7FoVFGuGW1NvmZoFjwlnynM4SA\n5kYzg6zYfwKBgEytliopZP8ndwedVkVBbttrJaxS5dHk0oYf+i8QEQxTUsgSRutG\n6rQXoZugV2PfV10QgShQ9wfegk8t+nuDk4ccYN3JmtlUkXDNz76SnvLJTJi9L7uX\nsUfwSqNaZqqhWXUL6LOOJbfF6gkbgyv87wIngxRlbEKcAyP/zgXB1o/nAoGALZqt\n262e0cJGTrlYD96sVzfi4tO6/OJIGeeWySkd82fwQGtZW2AKt8+1fIHIUejfIbHZ\n6vBXEnGGOiHAYrfqEgenuAuPy5wLaY4gPfMr/JqjCOf5gNM1FSKPsHNkKERcQIWl\nTrAmOqTHaWJNsTFDZVF0CzCsPGzx2FLvG032I18CgYBcqWMYsU/HtjyAbSveWO/h\nocbu7qYq/HcA7FabtYfO9gKmsqYTr2XBcZZLdWsNQoUuOfp33WwAnQcRQ9GnS6J6\ne/54G0sTPmcyfOU8cbpgXhOhLKFQcPCp+aMcDb8Da5DFHdrqt4Xo6GvKnLnmlCeE\n4WN4HTw2InDhO8YqaNvZdw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "chonaikai-api@chonaikaiapi.iam.gserviceaccount.com",
+  "client_id": "113947058094399369696",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chonaikai-api%40chonaikaiapi.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
