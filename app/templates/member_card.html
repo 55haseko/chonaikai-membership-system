@@ -17,11 +17,13 @@
 </head>
 <body>
   <div class="card">
-    <h2>🏘 町内会 会員証</h2>
-    <p><span class="label">氏名:</span> {{ member["氏名"] }}</p>
-    <p><span class="label">住所:</span> {{ member["住所"] }}</p>
-    <p><span class="label">会員番号:</span> {{ member["会員番号"] }}</p>
-    <p><span class="label">有効期限:</span> {{ member["有効期限"] }}</p>
+    <h2>町内会 会員証</h2>
+    <p><span class="label">会員名:</span> {{ member["会員名"] }}</p>
+    <p><span class="label">会員番号:</span> {{ member["会員番号（丁目、番地、号）"] }}</p>
+    <p><span class="label">電話番号:</span> {{ member["電話番号"] }}</p>
+    <p><span class="label">会費納入種別:</span> {{ member["会費納入種別（現金、コンビニ、Peatix、振込、PayPay）"] }}</p>
+    <p><span class="label">会費納入日:</span> {{ member["会費納入日"] }}</p>
+    <p><span class="label">今年からの会費納入回数:</span> {{ member["今年からの会費納入回数"] }}</p>
   </div>
 </body>
 </html>

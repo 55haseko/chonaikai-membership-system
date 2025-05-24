@@ -16,7 +16,18 @@ def show_card(request: Request, name: str = Form(...), address: str = Form(...))
     records = worksheet.get_all_records()
 
     for record in records:
-        if record.get("氏名") == name and record.get("住所") == address:
-            return templates.TemplateResponse("member_card.html", {"request": request, "member": record})
-    
+        if (
+            record.get("会員名") == name and
+            record.get("会員番号（丁目、番地、号）") == address
+        ):
+            # 👇 ここで電話番号の先頭に0を足すだけ
+            phone = str(record.get("電話"))
+            phone = "0" + phone
+            record["電話"] = phone  # 上書き
+
+            return templates.TemplateResponse(
+                "member_card.html",
+                {"request": request, "member": record}
+            )
+
     return HTMLResponse(content="❌ 会員情報が見つかりません", status_code=404)
