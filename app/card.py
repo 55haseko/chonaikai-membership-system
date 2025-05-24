@@ -70,7 +70,7 @@ def show_card(request: Request, name: str = Form(...), address: str = Form(...))
             phone = "0" + phone if phone else "（未登録）"
             record["電話番号"] = phone
 
-            # 🔸 最終有効年度・有効期限日を計算
+            # 🔸 有効期限情報
             paid_years = int(record.get("今年からの会費納入回数") or 0)
             last_year = get_last_valid_year(record.get("会費納入日"), paid_years)
             expiration_date = get_expiration_date(record.get("会費納入日"), paid_years)
@@ -78,6 +78,19 @@ def show_card(request: Request, name: str = Form(...), address: str = Form(...))
             record["有効期限年度"] = last_year if last_year else "未納"
             record["有効期限日"] = expiration_date
 
+            # 🔸 ここで現在年度と比較して未納判定
+            current_year = datetime.now().year
+            current_month = datetime.now().month
+            current_fiscal_year = current_year if current_month >= 4 else current_year - 1
+
+            if (not last_year) or (last_year < current_fiscal_year):
+                # 未納扱い → unpaidテンプレートへ
+                return templates.TemplateResponse(
+                    "unpaid.html",
+                    {"request": request, "member": record}
+                )
+
+            # 🔸 期限内 → 会員証表示
             return templates.TemplateResponse(
                 "member_card.html",
                 {"request": request, "member": record}
