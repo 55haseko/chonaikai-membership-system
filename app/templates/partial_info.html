@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>部分情報の確認</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2em; }
+    .card {
+      border: 2px solid #666;
+      padding: 1.5em;
+      border-radius: 10px;
+      display: inline-block;
+      background: #f5f5f5;
+    }
+    .label { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>部分情報の確認</h2>
+    <p>以下の情報が電話番号で見つかりました。</p>
+
+    <p><span class="label">氏名（一部）:</span> {{ member["会員名"] }}</p>
+    <p><span class="label">住所（一部）:</span> {{ member["住所"] }}</p>
+    <p><span class="label">電話番号:</span> {{ member["電話番号"] }}</p>
+
+    <p>もしご本人で間違いない場合は、町内会の担当までお問い合わせください。</p>
+
+    <p><a href="/api/login">🔙 ログイン画面に戻る</a></p>
+  </div>
+</body>
+</html>

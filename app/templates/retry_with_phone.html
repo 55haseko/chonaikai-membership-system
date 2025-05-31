@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>再確認フォーム</title>
+</head>
+<body>
+    <h1>会員情報が見つかりませんでした</h1>
+    <p>念のため、電話番号も含めて再度ご入力ください。</p>
+    <form method="post" action="/api/show-card">
+        <input type="hidden" name="name" value="{{ name }}">
+        <input type="hidden" name="address" value="{{ address }}">
+        電話番号（ハイフンなし）:<br>
+        <input type="text" name="phone" required><br>
+        <input type="submit" value="再検索">
+    </form>
+</body>
+</html>
